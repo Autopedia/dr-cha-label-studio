@@ -48,3 +48,5 @@ services:
 
 volumes:
   static: {} 
+
+# If docker-compose down not work, check https://movefast.tistory.com/189
