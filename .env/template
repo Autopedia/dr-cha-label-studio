@@ -1,0 +1,4 @@
+LABEL_STUDIO_USERNAME_ENV="email"
+LABEL_STUDIO_PASSWORD_ENV="password"
+PORT_ENV=8501
+LABEL_STUDIO_HOST_ENV="http://on-premise.doctor-cha.com:${PORT_ENV}/"
