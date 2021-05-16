@@ -5,7 +5,7 @@ services:
   nginx:
     image: nginx:latest
     ports:
-      - 8070:80
+      - ${PORT_ENV}:80
     depends_on:
       - app
     volumes:
@@ -20,7 +20,7 @@ services:
     build: .
     image: heartexlabs/label-studio:latest
     expose:
-      - "8070"
+      - ${PORT_ENV}
     depends_on:
       - db
     environment:
