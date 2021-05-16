@@ -6,7 +6,7 @@ WORKDIR /label-studio
 # Copy and install requirements.txt first for caching
 COPY deploy/requirements.txt /label-studio
 
-ENV TZ=Europe/Berlin
+ENV TZ=Asia/Seoul
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN apt-get update && apt-get install -y build-essential postgresql-client python3.8 python3-pip python3.8-dev uwsgi  git libxml2-dev libxslt-dev zlib1g-dev uwsgi
 
@@ -23,7 +23,9 @@ COPY . /label-studio
 RUN python3.8 setup.py develop
 
 EXPOSE 8070
-RUN ./deploy/prebuild_wo_frontend.sh
+# RUN ./deploy/prebuild_wo_frontend.sh
+RUN ./deploy/prebuild.sh
+
 
 COPY .credentials/dingbro-ai-storage.json /label-studio
 
