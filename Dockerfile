@@ -22,9 +22,8 @@ ENV LABEL_STUDIO_BASE_DATA_DIR=/label-studio/data
 COPY . /label-studio
 RUN python3.8 setup.py develop
 
-EXPOSE 8070
-# RUN ./deploy/prebuild_wo_frontend.sh
-RUN ./deploy/prebuild.sh
+# EXPOSE 8070
+RUN ./deploy/prebuild_wo_frontend.sh
 
 
 COPY .credentials/dingbro-ai-storage.json /label-studio
