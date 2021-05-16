@@ -64,7 +64,9 @@ LABEL_STUDIO_HOST_ENV="http://on-premise.doctor-cha.com:${PORT_ENV}/"
 label-studio start --username $LABEL_STUDIO_USERNAME --password $LABEL_STUDIO_PASSWORD
 ```  
 
-### Danger Zone 제거하기 
+### Danger Zone 제거하기  
+`index.js`와 `DangerZone.js`에서 모두 경로를 주석 처리하면 된다.  
+이때 `dockerfile`에서 `prebuil.sh`가 아닌 `prebuild_wo_frontend.sh`를 실행시켜야 한다. 
 
 
 ### Start Project
