@@ -22,8 +22,10 @@ ENV LABEL_STUDIO_BASE_DATA_DIR=/label-studio/data
 COPY . /label-studio
 RUN python3.8 setup.py develop
 
-EXPOSE 8080
+EXPOSE 8070
 RUN ./deploy/prebuild_wo_frontend.sh
+
+COPY .credentials/dingbro-ai-storage.json /label-studio
 
 ENTRYPOINT ["./deploy/docker-entrypoint.sh"]
 CMD bash /label-studio/deploy/start_label_studio.sh

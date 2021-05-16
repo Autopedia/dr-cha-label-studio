@@ -14,3 +14,4 @@ label_studio/frontend
 
 # except
 !label_studio/frontend/dist
+!.credentials
