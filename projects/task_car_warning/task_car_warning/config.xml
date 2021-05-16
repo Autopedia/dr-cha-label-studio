@@ -1,0 +1,4 @@
+<View>
+  <Image name="image" value="$image" zoomBy="4" style="flex-grow: 1" width="100%"  maxWidth="30000px" zoom="true" zoomControl="true"/>
+  <Rectangle name="label" toName="image" strokeColor="red" opacity="0.2" strokeWidth="0.2"/>
+</View>

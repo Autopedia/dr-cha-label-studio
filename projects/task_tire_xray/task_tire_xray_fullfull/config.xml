@@ -1,0 +1,9 @@
+<View style="display: flex; height: 700px; overflow: auto;">
+
+  <RectangleLabels name="label" toName="image">
+    <Label value="out" background="red"/>
+    <Label value="in" background="blue"/>
+  </RectangleLabels>  
+  <Image name="image" value="$image" style="flex-grow: 1" width="100%" maxWidth="30000px" zoom="true" zoomControl="true"/>
+
+</View>

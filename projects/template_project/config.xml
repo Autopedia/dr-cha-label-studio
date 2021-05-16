@@ -1,0 +1,25 @@
+<View style="display: flex;">
+  <View style="padding: 0em 1em; background: #f1f1f1; margin-right: 1em; border-radius: 3px">
+    <View style="position: sticky; top: 0">
+
+        <Header value="메인 경고등 영역 선택 후"/>
+        <Header value="세부 경고등 종류를 골라주세요" />
+
+        <RectangleLabels name="major" toName="image" opacity="0.6" strokeColor="red" strokeWidth="2">
+            <Label value="경고등"/>
+            <Label value="표시등"/>
+            <Label value="지시등"/>
+        </RectangleLabels>
+
+        <Filter name="fl" toName="minor" hotkey="shift+f" minlength="1" />
+        <Choices name="minor" toName="image" perRegion="true" required="true" requiredMessage="경고등 세부 타입을 입력해주세요!">
+            <Choice value="Cat"/>
+            <Choice value="Dog"/>
+        </Choices>
+
+    </View>
+  </View>
+
+  <Image name="image" value="$image" style="flex-grow: 1" width="100%" maxWidth="30000px" zoom="true" zoomControl="true"/>
+
+</View>

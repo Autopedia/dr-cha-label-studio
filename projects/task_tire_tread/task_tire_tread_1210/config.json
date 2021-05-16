@@ -1,0 +1,34 @@
+{
+  "title": "Tire Tread Detection Project",
+  "debug": false,
+  "input_path": null,
+  "output_dir": "completions",
+  "instruction": "\uc774 \uc0ac\uc774\ud2b8\ub294 \uc0d8\ud50c \ud504\ub85c\uc81d\ud2b8\uc785\ub2c8\ub2e4.",
+  "allow_delete_completions": false,
+  "templates_dir": "examples",
+  "editor": {
+    "debug": false
+  },
+  "label_config_updated": true,
+  "label_config": "config.xml",
+  "source": {
+    "type": "gcs",
+    "path": "tire-tread-dataset",
+    "params": {
+      "use_blob_urls": true,
+      "prefix": "1210/images",
+      "regex": "^.*.(jpeg|jpg|JPG|JPEG)"
+    }
+  },
+  "target": {
+    "type": "gcs-completions",
+    "path": "tire-tread-dataset",
+    "params": {
+      "prefix": "1210/outputs"
+    }
+  },
+  "ml_backends": [],
+  "sampling": "uniform",
+  "port": 8008,
+  "host": "0.0.0.0"
+}

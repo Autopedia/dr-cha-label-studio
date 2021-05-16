@@ -1,0 +1,18 @@
+<View style="display: flex;">
+
+  <Image name="image" value="$image" style="flex-grow: 1" width="100%" maxWidth="30000px" zoom="true"/>
+  <View style="padding: 0em 1em; background: #f1f1f1; margin-right: 1em; border-radius: 3px">
+    <View style="width: 300px; position: sticky; top: 0">
+
+        <Header value="각 텍스트 박스를 클릭한 후"/>
+        <Header value="계층 정보를 선택해주세요" />
+        <TextArea name="text" toName="image"
+          showSubmitButton="true" maxSubmissions="2" editable="true"
+          required="true" rows="10"></TextArea>
+
+              <TextArea name="text2" toName="image"
+          showSubmitButton="true" maxSubmissions="2" editable="true"
+          required="true" rows="10"></TextArea>
+    </View>
+  </View>
+</View>

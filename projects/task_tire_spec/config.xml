@@ -1,0 +1,29 @@
+<View style="display: flex;">
+  <View style="padding: 0em 1em; background: #f1f1f1; margin-right: 1em; border-radius: 3px">
+    <View style="position: sticky; top: 0">
+
+        <Header value="메인 경고등 영역 선택 후"/>
+        <Header value="세부 경고등 종류를 골라주세요" />
+
+        <RectangleLabels name="major" toName="image" opacity="0.6" strokeColor="red" strokeWidth="2">
+            <Label value="0"/>
+            <Label value="1"/>
+            <Label value="2"/>
+            <Label value="3"/>
+            <Label value="4"/>
+            <Label value="5"/>
+            <Label value="6"/>
+            <Label value="7"/>
+            <Label value="8"/>
+            <Label value="9"/>
+            <Label value="Z"/>
+            <Label value="R"/>
+            <Label value="/"/>
+        </RectangleLabels>
+
+    </View>
+  </View>
+
+  <Image name="image" value="$image" style="flex-grow: 1" width="100%" maxWidth="30000px" zoom="true" zoomControl="true"/>
+
+</View>

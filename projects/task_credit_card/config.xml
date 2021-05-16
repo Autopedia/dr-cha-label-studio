@@ -1,0 +1,6 @@
+<View>
+  <Image name="image" value="$image" zoomBy="4" style="flex-grow: 1" width="100%"  maxWidth="30000px" zoom="true" zoomControl="true"/>
+  <PolygonLabels name="label" toName="image" strokeColor="red" strokeWidth="0.5" opacity="1">
+    <Label value="card" background="red" opacity="1"/>
+  </PolygonLabels>
+</View>

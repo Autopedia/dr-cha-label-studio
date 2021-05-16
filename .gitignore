@@ -1,3 +1,6 @@
+.credentials
+
+
 node_modules
 *.lock
 *.pyc
