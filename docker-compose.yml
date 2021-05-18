@@ -5,7 +5,7 @@ services:
   nginx:
     image: nginx:latest
     ports:
-      - 8080:80
+      - ${PORT_ENV}:80
     depends_on:
       - app
     volumes:
@@ -20,7 +20,7 @@ services:
     build: .
     image: heartexlabs/label-studio:latest
     expose:
-      - "8080"
+      - ${PORT_ENV}
     depends_on:
       - db
     environment:
@@ -30,7 +30,11 @@ services:
       - POSTGRE_PASSWORD=
       - POSTGRE_PORT=5432
       - POSTGRE_HOST=db
-      - LABEL_STUDIO_HOST=${LABEL_STUDIO_HOST:-""}
+      - LABEL_STUDIO_HOST=${LABEL_STUDIO_HOST_ENV:-""}
+      - LABEL_STUDIO_USERNAME=${LABEL_STUDIO_USERNAME_ENV}
+      - LABEL_STUDIO_PASSWORD=${LABEL_STUDIO_PASSWORD_ENV}
+      - GOOGLE_APPLICATION_CREDENTIALS=./dingbro-ai-storage.json
+      - LABEL_STUDIO_DISABLE_SIGNUP_WITHOUT_LINK=true
     volumes:
       - ./mydata:/label-studio/data:rw
       - static:/label-studio/label_studio:rw
@@ -43,8 +47,10 @@ services:
     environment:
       - POSTGRES_HOST_AUTH_METHOD=trust
     volumes:
-      - ${POSTGRES_DATA_DIR:-./postgres-data}:/var/lib/postgresql/data
+      - ${POSTGRES_DATA_DIR:-./postgres-data/projects}:/var/lib/postgresql/data
 
 
 volumes:
   static: {} 
+
+# If docker-compose down not work, check https://movefast.tistory.com/189
