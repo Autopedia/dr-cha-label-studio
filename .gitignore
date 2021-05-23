@@ -1,5 +1,6 @@
 .credentials
 .env/*.env
+mydata
 
 
 node_modules
