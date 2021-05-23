@@ -1,8 +1,6 @@
 .credentials
 .env/*.env
-mydata
-postgres-data
-
+projects
 
 node_modules
 *.lock
