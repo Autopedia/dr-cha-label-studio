@@ -1,6 +1,7 @@
 .credentials
 .env/*.env
 mydata
+postgres-data
 
 
 node_modules
